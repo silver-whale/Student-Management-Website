@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Database</title>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+</head>
+
+<body>
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+
+    <nav>
+        <a href = "add/"><button id='addA' type="button">+ Add Student</button></a>
+    </nav>
+
+    <div>
+        <form class = "search">
+            <input id="TextInput" type="text" placeholder="검색어 입력">
+            <input id="Search" type="submit" value="Search by name">
+            <!--기능구현필요-->
+        </form>
+    </div>
+    
+    
+    <table id="datatable" border="1">
+        <tr height=40px>
+            <th>ID_num</th>
+            <th>Firstname</th>
+            <th>Secondname</th>
+            <th>Age</th>
+            <th>Major</th>
+            <th>Address</th>
+            <th> Update </th>
+            <th> Delete </th>
+        </tr>
+
+    {% for student in students %}
+        <tr height=30px>
+            <td>{{student.id_num}}</td>
+            <td>{{student.firstname}}</td>
+            <td>{{student.secondname}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.major}}</td>
+            <td>{{student.address}}</td>
+            <td><a href="{% url 'edit' student.id_num %}"><button id='edB' type="button">Edit</button></a></td>
+            <td><a href="{% url 'delete' student.id_num %}"><button id='edB' type="button">Delete</button></a></td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+
+</html>

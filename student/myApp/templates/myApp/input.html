@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Database</title>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+</head>
+
+<body>
+    <header>
+        <a id="BH" href = "{% url 'home' %}"><h1>Student Management System</h1></a>
+    </header>
+
+    <div>
+        <h1 id="addMes">Add new record</h1>
+    </div>
+
+    <section>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="id_num">ID_num</label><input id="id_num" name="id_num" type="text"><br><br>
+            <label for="firstname">First name</label><input id="firstname" name="firstname" type="text"><br><br>
+            <label for="secondname">Second name</label><input id="secondname" name="secondname" type="text"><br><br>
+            <label for="age">Age</label><input id="age" name="age" type="text"><br><br>
+            <label for="major">Major</label><input id="major" name="major" type="text"><br><br>
+            <label for="address">Address</label> <input id="address" name="address" type="text"><br><br>
+            <input id='addButton' type="submit" value="ADD">
+        </form>
+    </section>
+
+
+</body>
+
+</html>

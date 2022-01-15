@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Database</title>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+</head>
+
+<body>
+    <header>
+        <a id="BH" href = "{% url 'home' %}"><h1>Student Management System</h1></a>
+    </header>
+
+    <div>
+        <h1 id="EditMessage">Update Record</h1>
+    </div>
+
+    <section class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table id='editTable'>
+                <label>First name</label>{{form.firstname}}<br><br>
+                <label>Second name</label>{{form.secondname}}<br><br>
+                <label>Age</label>{{form.age}}<br><br>
+                <label>Major</label>{{form.major}}<br><br>
+                <label>Address</label>{{form.address}}<br><br>
+            </table>
+            <br>
+            <button id='editButton' type="submit" class="btn btn-primary">EDIT</button>
+        </form>
+    </section>
+
+</body>
+
+</html>

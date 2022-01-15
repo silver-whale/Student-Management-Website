@@ -1,0 +1,151 @@
+input:-ms-input-placeholder {color:#a8a8a8;}
+input::-webkit-input-placeholder {color:#a8a8a8;}
+input::-moz-placeholder {color:#a8a8a8;}
+
+h1{
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 20px;
+    text-align: center;
+    background-color: goldenrod;
+}
+
+#BH:visited{
+    color:black;
+}
+
+nav{
+    margin:30px;
+    text-align:center;
+}
+
+#addA{
+    background:goldenrod;
+    margin: 10px;
+    padding: 0.5rem 1rem;
+    border: 1px solid goldenrod;
+}
+#addA:active{
+    box-shadow:1px 1px 0 rgb(0,0,0,0.5);
+    position:relative;
+    top:2px;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+
+div{
+    margin: auto;
+}
+
+#TextInput{
+    border: 1px solid goldenrod;
+    font-size: 10pt;
+    width: 200px;
+    height: 30px;
+    padding: auto;
+    outline: none;
+    float: left;
+    text-align: center;
+}
+
+#Search{
+    margin-left: 5px;
+    width:auto;
+    height: 34px;
+    font-size: 10pt;
+    border:1px solid goldenrod;
+    display:block;
+    background: goldenrod;
+    outline:none;
+    float:left;
+}
+#Search:active{
+    box-shadow:1px 1px 0 rgb(0,0,0,0.5);
+    position:relative;
+    top:2px;
+}
+
+#datatable{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#addMes{
+    font-size:14pt;
+    text-align:center;
+    background:none;
+    margin: 40px auto 40px auto;
+}
+
+#EditMessage{
+    margin:30px;
+    text-align:center;
+    background:none;
+}
+
+
+section{
+    width: auto;
+    text-align:center;
+}
+
+#addButton{
+    margin-top: 20px;
+    width:auto;
+    font-size: 12pt;
+    height:50%;
+    border:1px solid goldenrod;
+    background: goldenrod;
+    outline:none;
+    text-align: center;
+    color: #ffffff;
+}
+#addButton:active{
+    box-shadow:1px 1px 0 rgb(0,0,0,0.5);
+    position:relative;
+    top:2px;
+}
+
+#edB{
+    font-size: 10pt;
+    width:50px;
+    height:30px;
+    border:1px solid goldenrod;
+    background: goldenrod;
+    outline:none;
+    text-align: center;
+    color:#ffffff;
+}
+#edB:active{
+    box-shadow:1px 1px 0 rgb(0,0,0,0.5);
+    position:relative;
+    top:2px;
+}
+
+#editTable{
+    height: auto;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+#editButton{
+    width:auto;
+    font-size: 12pt;
+    height:50%;
+    border:1px solid goldenrod;
+    background: goldenrod;
+    outline:none;
+    color:#ffffff;
+    text-align: center;
+}
+
+label{
+    margin-right:20px;
+}
