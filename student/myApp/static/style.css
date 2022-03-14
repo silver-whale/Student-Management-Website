@@ -40,7 +40,12 @@ div{
     margin: auto;
 }
 
-#TextInput{
+#toHome{
+    margin:auto;
+    text-align: center;
+}
+
+#searchInput{
     border: 1px solid goldenrod;
     font-size: 10pt;
     width: 200px;
@@ -51,7 +56,7 @@ div{
     text-align: center;
 }
 
-#Search{
+#searchButton{
     margin-left: 5px;
     width:auto;
     height: 34px;
@@ -62,11 +67,25 @@ div{
     outline:none;
     float:left;
 }
-#Search:active{
+#searchButton:active{
     box-shadow:1px 1px 0 rgb(0,0,0,0.5);
     position:relative;
     top:2px;
 }
+
+#homeButton{
+    background:goldenrod;
+    margin: 10px;
+    padding: 0.5rem 1rem;
+    border: 1px solid goldenrod;
+    text-align: center;
+}
+#homeButton:active{
+    box-shadow:1px 1px 0 rgb(0,0,0,0.5);
+    position:relative;
+    top:2px;
+}
+
 
 #datatable{
     width: 100%;
@@ -149,3 +168,4 @@ section{
 label{
     margin-right:20px;
 }
+

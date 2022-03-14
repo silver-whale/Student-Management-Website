@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Students
 from .forms import StudentsForm
 from django.urls import reverse
-
+from django.db import connection
 from django.contrib import messages
 
 
@@ -45,3 +45,28 @@ def edit(request, student_id_num):
             'now':'edit',
         }
         return render(request, "myApp/edit.html", {'form':form})
+
+def search(request):
+    students = Students.objects.all()
+    output = []
+    if request.method == "POST":
+        searchID = request.POST.get('searchID')
+        if searchID == None:
+            return render(request, 'myApp/home.html', {"students" : students})
+
+    with connection.cursor() as cursor:
+        query = "SELECT ID_num, Firstname, Secondname, Age, Major, Address  \
+                FROM students \
+                WHERE ID_num = %s"
+        cursor.execute(query, searchID)
+        fetchResult = cursor.fetchall()
+    connection.commit()
+    connection.close()
+
+    for temp in fetchResult:
+        eachRow = {'id_num':temp[0], 'firstname':temp[1], 'secondname':temp[2], 'age':temp[3], \
+                    'major':temp[4], 'address':temp[5]}
+        output.append(eachRow)
+
+    return render(request, "myApp/search.html", {"output":output})
+

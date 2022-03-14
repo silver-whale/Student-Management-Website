@@ -18,10 +18,10 @@
     </nav>
 
     <div>
-        <form class = "search">
-            <input id="TextInput" type="text" placeholder="검색어 입력">
-            <input id="Search" type="submit" value="Search by name">
-            <!--기능구현필요-->
+        <form action="search/" method="post">
+            {% csrf_token %}
+            <input id="searchInput" name = "searchID" type="text" placeholder="검색어 입력">
+            <input id="searchButton" type="submit" value="Search by ID">
         </form>
     </div>
     

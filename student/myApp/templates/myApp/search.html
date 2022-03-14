@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Database</title>
+    <link rel="stylesheet" href={% static 'style.css' %}>
+</head>
+
+<body>
+    <header>
+        <a id="BH" href = "{% url 'home' %}"><h1>Student Management System</h1></a>
+    </header>
+        
+    <table id="datatable" border="1">
+        <tr height=40px>
+            <th>ID_num</th>
+            <th>Firstname</th>
+            <th>Secondname</th>
+            <th>Age</th>
+            <th>Major</th>
+            <th>Address</th>
+            <th> Update </th>
+            <th> Delete </th>
+        </tr>
+
+    {% for op in output %}
+        <tr height=30px>
+            <td>{{op.id_num}}</td>
+            <td>{{op.firstname}}</td>
+            <td>{{op.secondname}}</td>
+            <td>{{op.age}}</td>
+            <td>{{op.major}}</td>
+            <td>{{op.address}}</td>
+            <td><a href="{% url 'edit' op.id_num %}"><button id='edB' type="button">Edit</button></a></td>
+            <td><a href="{% url 'delete' op.id_num %}"><button id='edB' type="button">Delete</button></a></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+
+<div id = 'toHome'>
+    <a href = "{% url 'home' %}"><button id='homeButton' type="button">HOME</button></a>
+</div>
+
+</html>
